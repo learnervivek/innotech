@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.navbar
+{
+    background: #00000081!important;
+    backdrop-filter: blur(8px)!important;
+    text-align: center !important;
+}
+.navbar .nav-items .nav-link
+{
+    text-align: center;
+    padding: 16px 16px;
+}
+.navbar-toggler:focus
+{
+    box-shadow: 0 0 10px white!important;
+    border: 2px solid white;
+}
+
+.nav-link
+{
+    color: white !important;
+    font-size: 1.5rem!important;
+   
+}
+.nav-link:hover{
+    background: linear-gradient(117deg, rgba(252, 63, 5, 1) 12%, rgba(255, 250, 250, 0.9698004201680672) 45%, rgb(80, 165, 15) 100%)!important;
+    color: transparent!important;
+    -webkit-background-clip: text!important;
+}
+.active
+{
+    background: linear-gradient(117deg, rgba(252, 63, 5, 1) 12%, rgba(255, 250, 250, 0.9698004201680672) 45%, rgb(80, 165, 15) 100%)!important;
+    color: transparent!important;
+    -webkit-background-clip: text!important;
+}
+:root
+{
+    --bg-danger:#2e5090!important;
+    --bg-white:#ffffff;
+    --bg-light-white:#f5f5f5;
+--bg-primary:#00d4ff!important;
+--secondary-font: "Merienda", cursive;
+    --primary-font:"Poppins",sans-serif;
+
+    --text-white:#ffffff;
+    --text-black:#131313;
+    --text-gray:#aaa;
+    --text-dark-gray:#777;
+}
+body{
+    font-family: var(--primary-font)!important;
+    background-color: var(--bg-white);
+    color: var(--text-black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75rem;
+    overflow-x: hidden;
+}
+h2
+{
+    font-family: var(--secondary-font)!important;
+    color: var(--bg-danger)!important;
+}
+p{
+   color:#393c5b!important;
+}
+.btn
+{
+    background-color:var(--bg-danger)!important;
+    color: var(--text-white)!important;
+    transition: .3s all linear!important;
+    border: none!important;
+}
+.btn:hover
+{
+    background-color:#802bb1!important;
+    color: var(--text-white)!important;
+    border: none!important;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.line
+{
+    background-color: #4c488a!important;
+}
+.card
+{
+    transition: .3s all ease-in-out;
+}
+.card img
+{
+    transition: .3s all linear;
+}
+.card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.end
+{
+    background: #38373781!important;
+    backdrop-filter: blur(8px)!important;
+    text-align: center !important;
+    color: white!important;
+}
+.off
+{
+    color: white!important; 
+}
+.icons i
+{
+    font-size: 35px;
+    padding-left: 20px;
+    transition: .5s all linear;
+}
+.icons i:hover
+{
+    transform: scale(1.2);
+    cursor: pointer;
+color: var(--bg-primary)!important; 
+}
+.back
+{
+    background: #38373781!important;
+    backdrop-filter: blur(1px)!important;
+    text-align: center !important;
+    color: white!important;
+}
+.cardd
+{
+
+}
+/* .imgtxt
+{
+    top: 100%;
+ 
+    background-color: rgba(0, 0, 0, 0.238);
+    transition: .4s all linear;
+}
+.cardd:hover .imgtxt
+{
+    bottom:0;
+    top: 0;
+} */
+.iconheart
+{
+    animation: heart .5s linear infinite alternate;
+    transform: scale(1);
+    
+}
+@keyframes heart {
+    from{
+        transform: scale(.7);
+    }
+    to{
+        transform: scale(1);
+    }
+}
