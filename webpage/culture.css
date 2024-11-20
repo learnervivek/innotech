@@ -69,9 +69,9 @@ h2
     font-family: var(--secondary-font)!important;
     color: var(--bg-danger)!important;
 }
-p{
+/* p{
    color:#393c5b!important;
-}
+} */
 .btn
 {
     background-color:var(--bg-danger)!important;
@@ -268,7 +268,8 @@ nav {
 }
 /* footer section */
 footer {
-    border-top: 3px solid #00a8c5;
+    border-top: 2px solid #a8a9a9;
+    margin-top: 30px;
 }
 
 .footer-1 h2 {
@@ -303,11 +304,10 @@ footer {
 .copyright {
     text-align: center;
     background-color: #ff7708;
-    color: #fff;
+    color: #ffffff;
     padding: 14px 0px;
     margin: 50px 0px 0px 0px;
 }
-
 .footer-par {
     display: flex;
     justify-content: space-between;
