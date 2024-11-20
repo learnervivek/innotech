@@ -102,6 +102,7 @@ nav {
 
 .nav-fixed h2 {
     color: #ff7702 !important;
+    /* color: #0f02ff !important; */
 }
 
 .nav-fixed .nav ul a {
@@ -722,7 +723,8 @@ div#blog-par {
 /*footer*/
 
 footer {
-    border-top: 3px solid #00a8c5;
+    /* border-top: 3px solid #00a8c5; */
+    border-top: 2px solid #a8a9a9;
 }
 
 
