@@ -99,12 +99,40 @@ async function signInWithFacebook() {
 }
 
 // Track authentication state
+// auth.onAuthStateChanged((user) => {
+//     if (user) {
+//         console.log('User is signed in:', user.email);
+//         // You can redirect to protected pages here
+//         // window.location.href = "index.html";
+//     } else {
+//         console.log('No user is signed in');
+//     }
+// });
+
+
+//new code
+
+
 auth.onAuthStateChanged((user) => {
     if (user) {
         console.log('User is signed in:', user.email);
-        // You can redirect to protected pages here
-    
+
+        // Check the current page to avoid redundant redirects
+        const currentPath = window.location.index.html;
+
+        if (currentPath === "/index.html" || currentPath === "/signup.html") {
+            // Redirect to the homepage or dashboard
+            window.location.href = "/index.html"; // Replace with the actual path to your homepage or dashboard
+        }
     } else {
-        console.log('No user is signed in');
+        console.log('No user is signed in.');
+
+        // Redirect to the login page if the user is not logged in and is on a protected page
+        const currentPath = window.location.pathname;
+
+        if (currentPath !== "/index.html" && currentPath !== "/signup.html") {
+            window.location.href = "/index.html"; // Replace with the actual path to your login page
+        }
     }
 });
+
