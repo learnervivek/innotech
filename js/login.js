@@ -98,6 +98,18 @@ async function signInWithFacebook() {
     }
 }
 
+async function signInWithGithub() {
+    try {
+        const provider = new firebase.auth.GithubAuthProvider();
+        await auth.signInWithPopup(provider);
+        showMessage('Successfully logged in with GitHub!', 'success');
+        // Redirect to dashboard or home page
+        // window.location.href = '/dashboard';
+    } catch (error) {
+        showMessage(error.message, 'error');
+    }
+}
+
 // Track authentication state
 auth.onAuthStateChanged((user) => {
     if (user) {
