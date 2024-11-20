@@ -9,7 +9,7 @@
 }
 .navbar
 {
-    background: #00000081!important;
+    background: #f0e7e7fc!important;
     backdrop-filter: blur(8px)!important;
     text-align: center !important;
 }
@@ -26,7 +26,7 @@
 
 .nav-link
 {
-    color: white !important;
+    color: rgb(13, 187, 109) !important;
     font-size: 1.5rem!important;
    
 }
@@ -87,6 +87,123 @@ p{
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+
+
+nav {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    padding: 30px 0;
+    transition: all 0.5s ease;
+}
+
+.nav-fixed {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 2px 2px 10px #bbb;
+}
+
+.nav-fixed h2 {
+    color: #ff7702 !important;
+}
+
+.nav-fixed .nav ul a {
+    color: #138808;
+}
+
+.menu-par {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul a {
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.nav ul a:before {
+    content: "s";
+    background-color: #ff7702;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    height: 2px;
+    font-size: 0px;
+    left: 10px;
+    transition: all 0.5s ease;
+}
+
+.nav ul a:hover:before {
+    width: 74%;
+} */
+
+.home_header_info h1 {
+    font-size: 45px;
+    padding: 20px 0px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logo-par h2 {
+    color: #fff;
+    font-size: 40px;
+}
+
+.home_header_info p {
+    font-size: 15px;
+    line-height: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home_header_info a {
+    background-color: #fff;
+    color: #138808;
+    text-decoration: none;
+    padding: 17px 45px;
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home_header_info a:hover {
+    color: #fff;
+}
+
+.home_header_info a:after {
+    content: "Read More";
+    background-color: #138808;
+    width: 0%;
+    font-size: 15px;
+    height: 100%;
+    line-height: 50px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    right: 0;
+}
+
+.home_header_info a:hover:after {
+    width: 100%;
+}
+
+.toggle-btn {
+    display: none;
+    color: #fff;
+}
+
+
 .line
 {
     background-color: #4c488a!important;
