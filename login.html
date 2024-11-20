@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.8.0/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.8.0/firebase-auth-compat.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="brand">
+            <h1 style="color: orangered;">Saarthi</h1>
+            <p style="color: orangered;">Discover and Preserve Our Heritage</p>
+        </div>
+
+
+        <!-- logout button -->
+
+        <button id="logoutButton" style="display: none;">Logout</button>
+
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('login')">Login</div>
+            <div class="tab" onclick="switchTab('signup')">Sign Up</div>
+        </div>
+
+        <form id="loginForm" class="active">
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="signupName">Full Name</label>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="signupName" required placeholder="Enter your full name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signupEmail">Email</label>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="signupEmail" required placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signupPassword" required placeholder="Create a password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="signupConfirmPassword">Confirm Password</label>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signupConfirmPassword" required placeholder="Confirm your password">
+                </div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div id="message"></div>
+
+        <div class="social-login">
+            <p>Or continue with</p>
+            <div class="social-icons">
+                <button type="button" class="google" onclick="signInWithGoogle()">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button type="button" class="facebook" onclick="signInWithFacebook()">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+<script src="./js/login.js"></script>
+</body>
+</html>
