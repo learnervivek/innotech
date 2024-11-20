@@ -41,7 +41,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         await auth.signInWithEmailAndPassword(email, password);
         showMessage('Successfully logged in!', 'success');
         // Redirect to dashboard or home page after successful login
-        // window.location.href = '/dashboard';
+        window.location.href = "index.html";
     } catch (error) {
         showMessage(error.message, 'error');
     }
@@ -99,40 +99,14 @@ async function signInWithFacebook() {
 }
 
 // Track authentication state
-// auth.onAuthStateChanged((user) => {
-//     if (user) {
-//         console.log('User is signed in:', user.email);
-//         // You can redirect to protected pages here
-//         // window.location.href = "index.html";
-//     } else {
-//         console.log('No user is signed in');
-//     }
-// });
-
-
-//new code
-
-
 auth.onAuthStateChanged((user) => {
     if (user) {
         console.log('User is signed in:', user.email);
-
-        // Check the current page to avoid redundant redirects
-        const currentPath = window.location.index.html;
-
-        if (currentPath === "/index.html" || currentPath === "/signup.html") {
-            // Redirect to the homepage or dashboard
-            window.location.href = "/index.html"; // Replace with the actual path to your homepage or dashboard
-        }
+        // You can redirect to protected pages here
+        
     } else {
-        console.log('No user is signed in.');
-
-        // Redirect to the login page if the user is not logged in and is on a protected page
-        const currentPath = window.location.pathname;
-
-        if (currentPath !== "/index.html" && currentPath !== "/signup.html") {
-            window.location.href = "/index.html"; // Replace with the actual path to your login page
-        }
+        console.log('No user is signed in');
     }
 });
+
 
