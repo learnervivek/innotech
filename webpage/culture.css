@@ -266,6 +266,15 @@ nav {
         transform: scale(1);
     }
 }
+/* gallery section */
+.filter-gal-par {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.filter-gal-par a{
+    text-decoration: none;
+}
 /* footer section */
 footer {
     border-top: 2px solid #a8a9a9;
